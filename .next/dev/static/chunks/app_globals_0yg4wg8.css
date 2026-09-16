@@ -1,0 +1,285 @@
+/* [project]/app/globals.css [app-client] (css) */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  color: #171a18;
+  background: #f7f7f5;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.nav {
+  color: #fff;
+  background: #171a18;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+  padding: 0 6%;
+  display: flex;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.logo span {
+  color: #45a35a;
+}
+
+.navlinks {
+  gap: 28px;
+  font-size: 14px;
+  display: flex;
+}
+
+.home {
+  justify-content: center;
+  min-height: calc(100vh - 64px);
+  display: flex;
+}
+
+.hero {
+  text-align: center;
+  width: min(900px, 92%);
+  padding: 110px 0 70px;
+}
+
+.hero h1 {
+  letter-spacing: -3px;
+  margin: 0 0 14px;
+  font-size: clamp(42px, 7vw, 76px);
+}
+
+.green {
+  color: #409955;
+}
+
+.sub {
+  color: #666;
+  margin-bottom: 38px;
+  font-size: 20px;
+}
+
+.search {
+  text-align: left;
+  position: relative;
+}
+
+.search input {
+  background: #fff;
+  border: 2px solid #d9ddd9;
+  border-radius: 14px;
+  outline: none;
+  width: 100%;
+  height: 64px;
+  padding: 0 22px;
+  font-size: 19px;
+}
+
+.search input:focus {
+  border-color: #409955;
+}
+
+.results {
+  z-index: 5;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 14px;
+  position: absolute;
+  top: 72px;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  box-shadow: 0 15px 35px #0001;
+}
+
+.result {
+  align-items: center;
+  gap: 14px;
+  padding: 11px 16px;
+  display: flex;
+}
+
+.result:hover {
+  background: #f0f5f0;
+}
+
+.result img {
+  object-fit: cover;
+  background: #ddd;
+  border-radius: 5px;
+  width: 42px;
+  height: 60px;
+}
+
+.result .year {
+  color: #777;
+  margin-left: auto;
+}
+
+.legend {
+  justify-content: space-around;
+  gap: 25px;
+  margin-top: 70px;
+  display: flex;
+}
+
+.legend div {
+  flex: 1;
+}
+
+.icon {
+  font-size: 32px;
+}
+
+.legend b {
+  margin-top: 8px;
+  font-size: 18px;
+  display: block;
+}
+
+.legend p {
+  color: #777;
+}
+
+.movie {
+  justify-content: center;
+  min-height: calc(100vh - 64px);
+  padding: 55px 5%;
+  display: flex;
+}
+
+.card {
+  color: #fff;
+  border-radius: 22px;
+  align-items: center;
+  gap: 38px;
+  width: min(1000px, 100%);
+  min-height: 430px;
+  padding: 48px;
+  display: flex;
+}
+
+.good {
+  background: linear-gradient(135deg, #3c9550, #51aa64);
+}
+
+.bad {
+  background: linear-gradient(135deg, #c92e32, #e04448);
+}
+
+.unrated {
+  background: linear-gradient(135deg, #777, #999);
+}
+
+.poster {
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  background: #ddd;
+  border-radius: 12px;
+  width: 230px;
+  min-width: 230px;
+}
+
+.details h1 {
+  margin: 8px 0;
+  font-size: 48px;
+}
+
+.status {
+  letter-spacing: -2px;
+  margin: 20px 0 5px;
+  font-size: 76px;
+  font-weight: 900;
+}
+
+.year {
+  opacity: .85;
+  font-size: 20px;
+}
+
+.desc {
+  max-width: 600px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.votes {
+  margin-top: 16px;
+  font-weight: 700;
+}
+
+.voteBtns {
+  gap: 12px;
+  margin-top: 28px;
+  display: flex;
+}
+
+.voteBtns button {
+  color: #fff;
+  cursor: pointer;
+  background: #ffffff18;
+  border: 1px solid #fffa;
+  border-radius: 10px;
+  padding: 13px 18px;
+  font-size: 16px;
+}
+
+.voteBtns button:hover {
+  color: #222;
+  background: #fff;
+}
+
+.note {
+  opacity: .75;
+  margin-top: 15px;
+  font-size: 13px;
+}
+
+@media (max-width: 650px) {
+  .nav {
+    padding: 0 4%;
+  }
+
+  .navlinks {
+    display: none;
+  }
+
+  .hero {
+    padding-top: 70px;
+  }
+
+  .legend {
+    flex-direction: column;
+  }
+
+  .card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 28px;
+  }
+
+  .poster {
+    width: 150px;
+    min-width: 150px;
+  }
+
+  .details h1 {
+    font-size: 36px;
+  }
+
+  .status {
+    font-size: 56px;
+  }
+}
+
+/*# sourceMappingURL=app_globals_0yg4wg8.css.map*/

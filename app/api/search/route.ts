@@ -1,0 +1,2 @@
+import {NextResponse} from 'next/server'; import {searchMovies,slugify,poster} from '@/lib/tmdb'
+export async function GET(req:Request){const q=new URL(req.url).searchParams.get('q')||'';if(q.trim().length<2)return NextResponse.json([]);try{const ms=await searchMovies(q);return NextResponse.json(ms.slice(0,8).map(m=>({id:m.id,title:m.title,release_date:m.release_date,poster_path:m.poster_path,slug:slugify(m.title)})))}catch(e){return NextResponse.json({error:String(e)},{status:500})}}
